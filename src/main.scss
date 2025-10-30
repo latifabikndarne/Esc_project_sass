@@ -8,21 +8,21 @@ body {
   background-color: #001826;
 }
 
-.Header img {
+img {
   height: 8vh;
   border: 2px solid transparent;
 }
 
-.Header img:hover {
+img:hover {
   border: 2px solid #079ce1;
 }
 
-.HeaderText {
+Text {
   color: white;
   font-family: Roboto;
 }
 
-.HeaderText:hover {
+Text:hover {
   text-decoration: underline;
   text-decoration-color: #079ce1;
   text-decoration-thickness: 3px;
@@ -88,26 +88,26 @@ footer {
     align-items: center;
     column-gap: 2.5rem;
     padding: 1rem 1rem;
-  }
+ 
 
-  .Header img {
+  img {
     height: 65px;
     width: auto;
     max-width: none;
     display: block;
   }
 
-  .HeaderText {
+  Text {
     grid-column: 2 / 3;
     font-size: 1rem;
     white-space: nowrap;
     margin: 0;
   }
 
-  .HeaderText br {
+  Text br {
     display: block;
   }
-
+ }
   .NavigationBar ul {
     display: none;
   }
@@ -152,12 +152,11 @@ footer {
     border: none;
     border-radius: 2px;
     border: 3px solid transparent;
-  }
 
-  .OnsiteButton:hover {
+  Button:hover {
     border: 3px solid #ac47c8;
   }
-
+  }
   .OnlineButton {
     font-family: Roboto;
     font-size: 0.9rem;
@@ -169,14 +168,14 @@ footer {
     padding-bottom: 3rem;
     padding-top: 0.8rem;
     text-decoration: underline;
-  }
+ 
 
-  .OnlineButton:hover {
+  Button:hover {
     text-decoration: underline;
     text-decoration-color: #079ce1;
     text-decoration-thickness: 3px;
   }
-
+ }
   .TestimonialsContent1 {
     flex: 0 1 460px;
     display: flex;
@@ -186,13 +185,13 @@ footer {
     border-radius: 1px;
     border: 3px solid transparent;
     background: #fff;
-  }
+  
 
-  .TestimonialsContent1:hover {
+  Content1:hover {
     border-color: rgb(15, 160, 232);
   }
 
-  .TestimonialsContent1 img {
+  Content1 img {
     width: 70px;
     height: 75px;
     border-radius: 50%;
@@ -200,34 +199,34 @@ footer {
     display: block;
   }
 
-  .TestimonialsContent1 p {
+  Content1 p {
     margin: 0;
     font: italic 400 1.1rem/1.3 sans-serif;
     text-align: left;
 
   }
 
-  .TestimonialsContent1 figcaption {
+  Content1 figcaption {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     margin: 0;
   }
 
-  .TestimonialsContent1 span {
+  Content1 span {
     color: #000;
     font-size: .95rem;
     font-style: normal;
     margin: 0;
   }
-
+}
   .TestimonialsContainer {
     display: flex;
     gap: 0rem;
     margin-top: 0rem;
   }
 
-  .TestimonialsContent1 {
+  .TestimonialsContent2 {
     flex: 0 1 460px;
     display: flex;
     gap: 1rem;
@@ -235,13 +234,13 @@ footer {
     border-radius: 1px;
     border: 3px solid transparent;
     background: #fff;
-  }
+  
 
-  .TestimonialsContent1:hover {
+  Content2:hover {
     border-color: rgb(15, 160, 232);
   }
 
-  .TestimonialsContent1 img {
+  Content2 img {
     width: 65px;
     height: 55px;
     border-radius: 50%;
@@ -249,31 +248,31 @@ footer {
     display: block;
   }
 
-  .TestimonialsContent1 p {
+  Content2 p {
     margin: 0;
     font: italic 400 1.1rem/1.3 sans-serif;
     text-align: left;
   }
 
-  .TestimonialsContent1 figcaption {
+  Content2 figcaption {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     margin: 0;
   }
 
-  .TestimonialsContent1 span {
+  Content2 span {
     color: #000;
     font-size: .95rem;
     font-style: normal;
     margin: 0;
   }
 
-  .TestimonialsContent1 p,
-  .TestimonialsContent1 span {
+  Content2 p,
+  .TestimonialsContent2 span {
     margin: 0;
   }
-
+}
   .TestimonialsContent2 {
     display: none;
   }
@@ -284,9 +283,9 @@ footer {
     font-family: sans-serif;
     font-size: 1rem;
     font-weight: 250;
-  }
+ 
 
-  .PopularChallenges h2 {
+  h2 {
     padding: 1rem;
     margin-top: 1rem;
     font-family: sans-serif;
@@ -294,12 +293,12 @@ footer {
     font-weight: 480;
   }
 
-  .PopularChallenges h2:hover {
+   h2:hover {
     text-decoration: underline;
     text-decoration-color: #079ce1;
     text-decoration-thickness: 3px;
   }
-
+ }
   .ChallengeRooms {
     display: grid;
     grid-auto-flow: column;
@@ -316,15 +315,15 @@ footer {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, .15);
-  }
+ 
 
-  .Room img {
+  img {
     width: 100%;
     display: block;
     border-radius: 10px 10px 0 0;
   }
 
-  .Room button {
+  button {
       Background-color: rgb(215, 10, 10);
     color: white;
     font-size: 0.7rem;
@@ -336,12 +335,12 @@ footer {
     margin-bottom: 0.5rem;
   }
 
-   .RoomInfo {
+   Info {
     padding: 1rem;
     font-family: sans-serif;
   }
 
-  .RoomDetails {
+  Details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -358,7 +357,7 @@ footer {
     font-size: .8rem;
     color: #444;
   }
-
+ }
   .CTAButtonCenter {
     display: grid;
     grid-template-columns: auto auto;
@@ -385,9 +384,9 @@ footer {
     height: 53vh;
     padding: 1.5rem;
     gap: 0rem;
-  }
 
-  .FullWidthSectionText {
+
+  Text {
     color: #fff;
     font-family: sans-serif;
     text-align: center;
@@ -395,13 +394,13 @@ footer {
     margin: 0;
   }
 
-  .FullWidthSectionText:hover {
+  Text:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 1px;
   }
 
-  .FullWidthSectionButton {
+  Button {
     color: hwb(192 42% 16%);
     font-size: 1.2rem;
     font-weight: 500;
@@ -414,10 +413,10 @@ footer {
     border-radius: 0.3rem;
   }
 
-  .FullWidthSectionButton:hover {
+  Button:hover {
     border: 2px solid #9c38d6;
   }
-
+  }
   .Options {
     grid-template-columns: 10rem;
     grid-template-rows: auto;
@@ -429,9 +428,9 @@ footer {
     display: grid;
     grid-column: 1 / -1;
     grid-row: auto;
-  }
+  
 
-  .TeamPlay h2 {
+  h2 {
     font-size: 1.4rem;
     font-family: sans-serif;
     font-weight: 760;
@@ -442,13 +441,13 @@ footer {
     margin: 0.5rem;
   }
 
-  .TeamPlay h2:hover {
+  h2:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 3px;
   }
 
-  .TeamPlay p {
+   p {
     font-size: 1.2rem;
     font-family: sans-serif;
     font-weight: 500;
@@ -457,13 +456,13 @@ footer {
 
   }
 
-  .TeamPlay p:hover {
+  p:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 1px;
   }
 
-  .TeamPlay img {
+   img {
     display: block;
     width: 100%;
     height: 18rem;
@@ -471,11 +470,11 @@ footer {
     padding-bottom: 0px;
   }
 
-  .TeamPlay img:hover {
+  img:hover {
     border: 3px solid #03b2cd;
   }
 
-  .TeamPlayButton {
+  Button {
     background-color: #f31c1c;
     font-family: Roboto;
     font-size: 1.2rem;
@@ -489,19 +488,19 @@ footer {
     border: 3px solid transparent;
   }
 
-  .TeamPlayButton:hover {
+  Button:hover {
     border: 3px solid #9c38d6;
   }
-
+}
   .OnlinePlay {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
       "pic"
       "text";
-  }
+ 
 
-  .OnlinePlayPicture img {
+  Picture img {
     grid-column: 1;
     grid-row: 1;
     width: 100%;
@@ -511,16 +510,16 @@ footer {
     box-sizing: border-box;
   }
 
-  .OnlinePlayPicture img:hover {
+  Picture img:hover {
     border: 2px solid #03b2cd;
   }
 
-  .OnlinePlayText {
+  Text {
     grid-column: 1;
     grid-row: 2;
   }
 
-  .OnlinePlay h2 {
+   h2 {
     font-size: 1.4rem;
     font-family: sans-serif;
     font-weight: 790;
@@ -530,13 +529,13 @@ footer {
     padding-bottom: 1rem;
   }
 
-  .OnlinePlay h2:hover {
+  h2:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 2px;
   }
 
-  .OnlinePlay p {
+   p {
     font-size: 1.2rem;
     font-family: sans-serif;
     font-weight: 500;
@@ -546,13 +545,13 @@ footer {
     padding: 0rem;
   }
 
-  .OnlinePlay p:hover {
+   p:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 1px;
   }
 
-  .OnlinePlayButton {
+  Button {
     background-color: #dc3232;
     font-family: Roboto;
     font-size: 1.1rem;
@@ -567,10 +566,10 @@ footer {
 
   }
 
-  .OnlinePlayButton:hover {
+  Button:hover {
     border: 2px solid #9c38d6;
   }
-
+ }
   .FooterContainer {
     display: grid;
     grid-template-columns: 1fr;
@@ -580,7 +579,7 @@ footer {
     font-size: 0.9rem;
     font-weight: 50;
     padding: 2.5rem;
-  }
+
 
   .h {
     font-family: sans-serif;
@@ -594,12 +593,12 @@ footer {
     text-decoration-thickness: 2px;
   }
 
-  .FooterSiteMap {
+  SiteMap {
     grid-column: 1 / -1;
     display: grid;
   }
 
-  .FooterSiteMap ul {
+  SiteMap ul {
     display: grid;
     list-style: none;
     margin-left: 0rem;
@@ -608,25 +607,25 @@ footer {
     padding: 0;
   }
 
-  .FooterSiteMap li {
+  SiteMap li {
     text-decoration: none;
     font-family: Roboto;
     font-size: 0.9rem;
     font-weight: 200;
   }
 
-  .FooterSiteMap a {
+  SiteMap a {
     color: #fff;
     text-decoration: none;
   }
 
-  .FooterContactInfo {
+  ContactInfo {
     grid-column: 1 / -1;
     display: grid;
     row-gap: .0rem;
   }
 
-  .FooterContactInfo ul {
+  ContactInfo ul {
     display: grid;
     list-style: none;
     margin-left: 0rem;
@@ -635,7 +634,7 @@ footer {
     margin: 0;
   }
 
-  .FooterContactInfo li {
+  ContactInfo li {
     text-decoration: none;
     font-family: Roboto;
     font-size: 0.9rem;
@@ -644,7 +643,7 @@ footer {
 
   }
 
-  .FooterContactInfo a {
+  ContactInfo a {
     color: #fff;
     text-decoration: none;
   }
@@ -654,7 +653,7 @@ footer {
     margin: 0.3rem;
     padding: 0rem;
   }
-
+  }
 }
 
 @media screen and (min-width: 401px) {
