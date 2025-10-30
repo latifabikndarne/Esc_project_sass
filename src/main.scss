@@ -664,9 +664,9 @@ footer {
     align-items: center;
     gap: 2rem;
     padding: 2rem;
-  }
 
-  .Header img {
+
+  img {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     width: 6.5rem;
@@ -674,7 +674,7 @@ footer {
     border: 2px solid transparent;
   }
 
-  .HeaderText {
+  Text {
     grid-column: 2 / 3;
     font-size: 1.8rem;
     font-weight: 650;
@@ -683,10 +683,10 @@ footer {
     margin-top: 1.1rem;
   }
 
-  .HeaderText br {
+  Text br {
     display: none;
   }
-
+  }
   .NavigationBar {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
@@ -797,13 +797,13 @@ footer {
     border-radius: 1px;
     border: 3px solid transparent;
     background: #fff;
-  }
 
-  .TestimonialsContent1:hover {
+
+  Content1:hover {
     border-color: rgb(15, 160, 232);
   }
 
-  .TestimonialsContent1 img {
+  Content1 img {
     width: 70px;
     height: 75px;
     border-radius: 50%;
@@ -811,27 +811,27 @@ footer {
     display: block;
   }
 
-  .TestimonialsContent1 p {
+  Content1 p {
     margin: 0;
     font: italic 400 1.1rem/1.3 sans-serif;
     text-align: left;
 
   }
 
-  .TestimonialsContent1 figcaption {
+  Content1 figcaption {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     margin: 0;
   }
 
-  .TestimonialsContent1 span {
+  Content1 span {
     color: #000;
     font-size: .95rem;
     font-style: normal;
     margin: 0;
   }
-
+  }
   .TestimonialsContent2 {
     flex: 0 1 460px;
     display: flex;
@@ -841,13 +841,13 @@ footer {
     border-radius: 0px;
     border: 3px solid transparent;
     background: #fff;
-  }
+  
 
-  .TestimonialsContent2:hover {
+  Content2:hover {
     border-color: rgb(15, 160, 232);
   }
 
-  .TestimonialsContent2 img {
+  Content2 img {
     width: 70px;
     height: 75px;
     border-radius: 50%;
@@ -855,26 +855,26 @@ footer {
     display: block;
   }
 
-  .TestimonialsContent2 p {
+  Content2 p {
     margin: 0;
     font: italic 400 1.1rem/1.3 sans-serif;
     text-align: left;
   }
 
-  .TestimonialsContent2 figcaption {
+  Content2 figcaption {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     margin: 0;
   }
 
-  .TestimonialsContent2 span {
+  Content2 span {
     color: #000;
     font-size: .95rem;
     font-style: normal;
     margin: 0;
   }
-
+}
   .PopularChallenges {
     width: 100%;
     max-width: 100%;
@@ -910,7 +910,7 @@ footer {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, .15);
     border: 3px solid transparent;
     box-sizing: border-box;
-  }
+ 
 
   .Room img {
     width: 100%;
@@ -922,14 +922,14 @@ footer {
     border-color: #035ecd;
   }
 
-  .Room h3 {
+  h3 {
     font-size: 1.4rem;
     font-family: sans-serif;
     font-weight: 300;
     margin-top: 0.7rem;
   }
 
-  .Room button {
+  button {
     Background-color: rgb(215, 10, 10);
     color: white;
     font-size: 0.7rem;
@@ -941,12 +941,12 @@ footer {
     margin-bottom: 0.5rem;
   }
 
-  .RoomInfo {
+  Info {
     padding: 1rem;
     font-family: sans-serif;
   }
 
-  .RoomDetails {
+  Details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -963,7 +963,7 @@ footer {
     font-size: .8rem;
     color: #444;
   }
-
+ }
   .CTAButtoCenter {
     width: 100%;
     display: grid;
@@ -1019,9 +1019,9 @@ footer {
     height: 52vh;
     padding: 1.5rem;
     gap: 0rem;
-  }
+  
 
-  .FullWidthSectionText {
+  Text {
     color: #fff;
     font-family: sans-serif;
     text-align: center;
@@ -1030,13 +1030,13 @@ footer {
     padding: 1rem;
   }
 
-  .FullWidthSectionText:hover {
+  Text:hover {
     text-decoration: underline;
     text-decoration-color: #035ecd;
     text-decoration-thickness: 2px;
   }
 
-  .FullWidthSectionButton {
+  Button {
     color: hwb(192 42% 16%);
     font-size: 1.2rem;
     font-weight: 550;
@@ -1047,28 +1047,28 @@ footer {
     border-radius: 0.3rem;
   }
 
-  .FullWidthSectionButton:hover {
+  Button:hover {
     border: 2px solid #9c38d6;
   }
-
+}
   .TeamPlay {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
     margin: 0 auto;
-  }
+ 
 
-  .TeamPlayPicture {
+  Picture {
     grid-column: 1 / 2;
   }
 
-  .TeamPlayText {
+  Text {
     grid-column: 2 / 3;
   }
 
 
-  .TeamPlayPicture img {
+  Picture img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1077,11 +1077,11 @@ footer {
     transition: border-color .2s ease;
   }
 
-  .TeamPlayPicture img:hover {
+  Picture img:hover {
     border-color: #03b2cd;
   }
 
-  .TeamPlayText {
+  Text {
     align-items: center;
     padding: 1rem 1rem;
     font-size: 1rem 3rem;
@@ -1091,7 +1091,7 @@ footer {
     gap: 0rem;
   }
 
-  .TeamPlayText h2 {
+  Text h2 {
     font-size: 1.5rem;
     font-family: sans-serif;
     font-weight: 700;
@@ -1099,23 +1099,23 @@ footer {
     gap: 2rem;
   }
 
-  .TeamPlayText h2:hover {
+  Text h2:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 3px;
   }
 
-  .TeamPlayText p {
+  Text p {
     line-height: 1.5;
   }
 
-  .TeamPlayText p:hover {
+  Text p:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 3px;
   }
 
-  .TeamPlayButton {
+  Button {
     background-color: #f31c1c;
     font-family: Roboto;
     font-size: 1.2rem;
@@ -1127,26 +1127,26 @@ footer {
     border: 3px solid transparent;
   }
 
-  .TeamPlayButton:hover {
+  Button:hover {
     border: 3px solid #9c38d6;
   }
-
+ }
   .OnlinePlay {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
-  }
+ 
 
-  .OnlinePlayText {
+  Text {
     grid-column: 1 / 2;
   }
 
-  .OnlinePlayPicture {
+  Picture {
     grid-column: 2 / 3;
   }
 
-  .OnlinePlayPicture img {
+  Picture img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1155,11 +1155,11 @@ footer {
     transition: border-color .2s ease;
   }
 
-  .OnlinePlayPicture img:hover {
+  Picture img:hover {
     border-color: #03b2cd;
   }
 
-  .OnlinePlayText {
+  Text {
     align-items: center;
     padding: 1rem 2rem;
     font-size: 1.1rem;
@@ -1169,7 +1169,7 @@ footer {
     gap: 0rem;
   }
 
-  .OnlinePlayText h2 {
+  Text h2 {
     font-size: 1.4rem;
     font-family: sans-serif;
     font-weight: 760;
@@ -1177,23 +1177,23 @@ footer {
     gap: 2rem;
   }
 
-  .OnlinePlayText h2:hover {
+  Text h2:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 3px;
   }
 
-  .OnlinePlayText p {
+  Text p {
     line-height: 1.5;
   }
 
-  .OnlinePlayText p:hover {
+  Text p:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 3px;
   }
 
-  .OnlinePlayButton {
+  Button {
     background-color: #f31c1c;
     color: white;
     font-family: Roboto;
@@ -1205,10 +1205,10 @@ footer {
     border: 3px solid transparent;
   }
 
-  .OnlinePlayButton:hover {
+  Button:hover {
     border: 3px solid #9c38d6;
   }
-
+ }
   .FooterContainer {
     display: grid;
     grid-template-columns: 4fr 1fr 1fr;
@@ -1218,23 +1218,23 @@ footer {
     border: 3px solid transparent;
     box-sizing: border-box;
     transition: border-color .2s ease;
-  }
 
-  .FooterContainer:hover {
+
+  Container:hover {
     border-color: #079ce1;
   }
 
-  .Footer h4 {
+  h4 {
     font-size: 0.9rem;
     font-weight: 550;
   }
 
-  .Footer h4:hover {
+   h4:hover {
     color: #03b2cd;
 
   }
 
-  .FooterText {
+  Text {
     grid-column: 1 / 2;
     color: white;
     font-family: sans-serif;
@@ -1246,22 +1246,22 @@ footer {
 
   }
 
-  .FooterText:hover {
+  Text:hover {
     text-decoration: underline;
     text-decoration-color: #079ce1;
     text-decoration-thickness: 2px;
   }
 
-  .FooterSiteMap {
+  SiteMap {
     grid-column: 2 / 3;
   }
 
-  .FooterSiteMap ul {
+  SiteMap ul {
     list-style: none;
     row-gap: 0rem;
   }
 
-  .FooterSiteMap li {
+  SiteMap li {
     color: white;
     text-decoration: none;
     font-family: sans-serif;
@@ -1269,19 +1269,19 @@ footer {
     font-weight: 200;
   }
 
-  .FooterContactInfo {
+  ContactInfo {
     grid-column: 3 / 4;
     justify-self: center;
     padding: 2rem;
   }
 
-  .FooterContactInfo ul {
+  ContactInfo ul {
     list-style: none;
     margin-left: 0rem;
     margin: .5rem 0 0;
   }
 
-  .FooterContactInfo li {
+  ContactInfo li {
     text-decoration: none;
     font-family: sans-serif;
     font-size: 0.8rem;
@@ -1289,23 +1289,24 @@ footer {
     color: #fff;
   }
 
-  .FooterSiteMap a,
-  .FooterContactInfo a {
+  SiteMap a,
+  ContactInfo a {
     color: #fff;
     text-decoration: none;
   }
 
-  .FooterSiteMap a:hover,
-  .FooterContactInfo a:hover {
+  SiteMap a:hover,
+  ContactInfo a:hover {
     text-decoration: underline;
     text-decoration-color: #079ce1;
     text-decoration-thickness: 2px;
   }
 
-  .FooterSiteMap ul,
-  .FooterContactInfo ul {
+  SiteMap ul,
+  ContactInfo ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 }
+  }
