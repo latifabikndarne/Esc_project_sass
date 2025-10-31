@@ -154,7 +154,7 @@ footer {
     padding-top: 0.8rem;
     text-decoration: underline;
   }
-  .OnlineButton:hover {
+  .OnlineButton Button:hover {
     text-decoration: underline;
     text-decoration-color: #079ce1;
     text-decoration-thickness: 3px;
@@ -201,7 +201,7 @@ footer {
     gap: 0rem;
     margin-top: 0rem;
   }
-  .TestimonialsContent1 {
+  .TestimonialsContent2 {
     flex: 0 1 460px;
     display: flex;
     gap: 1rem;
@@ -210,35 +210,35 @@ footer {
     border: 3px solid transparent;
     background: #fff;
   }
-  .TestimonialsContent1:hover {
+  .TestimonialsContent2:hover {
     border-color: rgb(15, 160, 232);
   }
-  .TestimonialsContent1 img {
+  .TestimonialsContent2 img {
     width: 65px;
     height: 55px;
     border-radius: 50%;
     object-fit: cover;
     display: block;
   }
-  .TestimonialsContent1 p {
+  .TestimonialsContent2 p {
     margin: 0;
     font: italic 400 1.1rem/1.3 sans-serif;
     text-align: left;
   }
-  .TestimonialsContent1 figcaption {
+  .TestimonialsContent2 figcaption {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin: 0;
   }
-  .TestimonialsContent1 span {
+  .TestimonialsContent2 span {
     color: #000;
     font-size: 0.95rem;
     font-style: normal;
     margin: 0;
   }
-  .TestimonialsContent1 p,
-  .TestimonialsContent1 span {
+  .TestimonialsContent2 p,
+  .TestimonialsContent2 span {
     margin: 0;
   }
   .TestimonialsContent2 {
@@ -281,6 +281,7 @@ footer {
   }
   .Room img {
     width: 100%;
+    height: 12rem;
     display: block;
     border-radius: 10px 10px 0 0;
   }
@@ -295,11 +296,11 @@ footer {
     margin-left: 9.8rem;
     margin-bottom: 0.5rem;
   }
-  .RoomInfo {
+  .Room Info {
     padding: 1rem;
     font-family: sans-serif;
   }
-  .RoomDetails {
+  .Room Details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -504,7 +505,7 @@ footer {
     font-weight: 50;
     padding: 2.5rem;
   }
-  .h {
+  .Footer h {
     font-family: sans-serif;
     font-size: 2rem;
     font-weight: 100;
@@ -560,8 +561,8 @@ footer {
     color: #fff;
     text-decoration: none;
   }
-  p,
-  h4 {
+  .Footer p,
+  .Footer h4 {
     margin: 0.3rem;
     padding: 0rem;
   }
@@ -761,8 +762,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    margin-left: 0;
+    padding-bottom: 7rem;
   }
   .PopularChallenge h2 {
     justify-self: center;
@@ -776,10 +777,10 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     width: 100%;
-    height: 21rem;
+    height: 18rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 5rem;
+    padding: 2rem;
   }
   .Room {
     background: #fff;
@@ -790,6 +791,7 @@ footer {
   }
   .Room img {
     width: 100%;
+    height: 12rem;
     display: block;
     border-radius: 10px 10px 0 0;
   }
@@ -813,11 +815,11 @@ footer {
     margin-left: 9rem;
     margin-bottom: 0.5rem;
   }
-  .RoomInfo {
+  .Romm Info {
     padding: 1rem;
     font-family: sans-serif;
   }
-  .RoomDetails {
+  Details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -845,12 +847,11 @@ footer {
     font-size: 1rem;
     font-weight: 700;
     line-height: 100%;
-    padding: 1.5rem 3rem;
+    padding: 1.2rem 2rem;
     border-radius: 4px;
     border: 3px solid transparent;
     box-sizing: border-box;
-    margin-left: 18rem;
-    margin-bottom: 4rem;
+    margin-left: 10rem;
   }
   .OnlineButtonCenter:hover {
     border: 3px solid #ac47c8;
@@ -861,7 +862,7 @@ footer {
     font-size: 1rem;
     font-weight: 700;
     line-height: 100%;
-    padding: 1.5rem 3rem;
+    padding: 1.2rem 2rem;
     border-radius: 4px;
     border: 3px solid transparent;
     box-sizing: border-box;
@@ -886,8 +887,8 @@ footer {
     font-family: sans-serif;
     text-align: center;
     font-size: 1.5rem;
-    margin: 0;
-    padding: 1rem;
+    margin: 1rem;
+    padding: 0rem 8rem;
   }
   .FullWidthSectionText:hover {
     text-decoration: underline;
