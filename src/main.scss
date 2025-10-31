@@ -53,6 +53,10 @@ body {
   text-decoration: underline;
 }
 
+.MainContent { 
+  background-color: white;
+
+}
 
 .HeroMobile {
   width: 100%;
@@ -115,7 +119,10 @@ footer {
     display: none;
   }
 
+.MainContent { 
+  background-color: white;
 
+}
   .HeroMobile {
     display: block;
     width: 100%;
@@ -663,7 +670,7 @@ footer {
 @media screen and (min-width:$desktop) {
   .Header {
     display: grid;
-    grid-template-columns: 6rem 5rem 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     align-items: center;
     gap: 2rem;
@@ -724,6 +731,11 @@ footer {
     text-decoration-color: #079ce1;
     text-decoration-thickness: 2.5px;
   }
+
+  .MainContent { 
+  background-color: white;
+
+}
 
   .HeroDesktop {
     display: block;
