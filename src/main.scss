@@ -757,7 +757,7 @@ footer {
     position: absolute;
     align-items: center;
     gap: 1rem;
-    margin-left: 20rem;
+    margin-left: 24rem;
     margin-top: -2rem;
     width: 100%;
   }
@@ -983,28 +983,28 @@ footer {
     color: #444;
   }
  
-  .CTAButtoCenter {
+  .CTAButtonCenter {
     width: 100%;
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
-   
+    margin: 2rem-0;
+    padding: 2rem 0; 
   }
 
   .OnlineButtonCenter {
-    background-color: #e81717;
+    background-color: red;
     color: white;
     font-family: Roboto;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     line-height: 100%;
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 2.8rem;
     border-radius: 4px;
     border: 3px solid transparent;
     box-sizing: border-box;
-    margin-left: 10rem;
+     margin-left: 4rem;
      
-
   }
 
   .OnlineButtonCenter:hover {
@@ -1014,14 +1014,15 @@ footer {
   .OnsiteButtonCenter {
     background-color: #89d9e9;
     font-family: Roboto;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     line-height: 100%;
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 2.8rem;
     border-radius: 4px;
     border: 3px solid transparent;
     box-sizing: border-box;
     margin-left: 1rem;
+    
   }
 
   .OnsiteButtonCenter:hover {
@@ -1038,7 +1039,7 @@ footer {
     background-color: black;
     height: 52vh;
     padding: 1.5rem;
-    gap: 0rem;
+    gap: 1rem;
   }
 
   .FullWidthSectionText {
