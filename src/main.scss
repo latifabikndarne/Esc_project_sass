@@ -110,109 +110,133 @@ footer {
   .HeaderText br {
     display: block;
   }
- 
-.Header { position: relative; }
-.menu-button {
-  position: absolute;
-  top: .75rem;
-  right: .75rem;
-  width: 50px; 
-  height: 36px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: black; 
-  border: 0; 
-  padding: 6px; 
-}
-.menu-button span {
-  display: block; 
-  height: 4.5px; 
-  width: 2.4rem;
-  background: #fff; 
-  border-radius: 2px;
-}
 
-.menu-overlay {
-  position: fixed;
-  background-color: black; 
-  inset: 0; 
-  z-index: 9999;
-  margin: 0.8rem;
- display: none;               /* dold från början */
-  justify-content: center;
-  align-items: center;
-  animation-fill-mode: both;  
-}
+  .Header {
+    position: relative;
+  }
 
-@keyframes fadeZoomIn {
-  0% {
+  .menu-button {
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    width: 50px;
+    height: 36px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: black;
+    border: 0;
+    padding: 1px;
+  }
+
+  .menu-button span {
+    display: block;
+    height: 4.5px;
+    width: 2.4rem;
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    background-color: black;
+    inset: 0;
+    z-index: 9999;
+    margin: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.98);
+    pointer-events: none;
   }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+
+  .menu-overlay.open {
+    opacity: 1;                 
+  transform: scale(1);
+    animation: fadeZoomIn 1s ease forwards;
+    pointer-events: auto;
   }
-}
 
-@keyframes fadeZoomOut {
-  0% {
-    opacity: 1;
-    transform: scale(1);
+  @keyframes fadeZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
-  100% {
-    opacity: 0;
-    transform: scale(0.9);
+
+  @keyframes fadeZoomOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(0.98);
+    }
   }
-}
+
+.menu-overlay[hidden]{ display:none }
+
+  .overlay-nav {
+    position: relative;
+  }
+
+  .overlay-close {
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    font-size: 3.8rem;
+    font-weight: 400;
+    margin-top: -5.2rem;
+    margin-left: 16rem;
+    border: none;
+    line-height: 1;
+    z-index: 10000;
+    cursor: pointer;
+  }
+
+  .menu-overlay[hidden] {
+    display: none !important;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
 
 
-
-.overlay-nav    { 
-  position: relative;
- }              
-.overlay-close  { 
-  position: absolute; 
-  color: white;
-  background-color: transparent;
-  font-size: 3.8rem;
-  font-weight: 400;
-  top: 0.1rem; 
-  right: 1.2rem; 
-  border: none;
-  cursor: pointer;
-  line-height: 1; 
-  z-index: 10000; cursor: pointer; 
- }
-
-.menu-overlay[hidden] {
-  display: none !important; }  
-body.no-scroll { overflow: hidden; }
+  .overlay-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 8rem 4rem;
+    display: grid;
+    gap: 2.5rem;
+    text-align: center;
+  }
 
 
-.overlay-nav ul {
-  list-style: none;
-  margin: 0; 
-  padding: 12rem 4rem;
-  display: grid; 
-  gap: 2.5rem;
-  text-align: center;
-}
+  .overlay-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
 
+  .overlay-nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: #079ce1;
+  }
 
-.overlay-nav a {
-  color: #fff; 
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 1.7rem; 
-  font-weight: 600;
-}
-.overlay-nav a:hover {
-  text-decoration: underline; 
-  text-decoration-color: #079ce1;
-}
- .NavigationBar { display: none; }
+  .NavigationBar {
+    display: none;
+  }
 
 
   .HeroMobile {
@@ -255,10 +279,11 @@ body.no-scroll { overflow: hidden; }
     border-radius: 2px;
     border: 3px solid transparent;
   }
+
   .OnsiteButton:hover {
     border: 3px solid #ac47c8;
   }
-  
+
   .OnlineButton {
     font-family: Roboto;
     font-size: 0.9rem;
@@ -270,14 +295,15 @@ body.no-scroll { overflow: hidden; }
     padding-bottom: 3rem;
     padding-top: 0.8rem;
     text-decoration: underline;
- 
 
-  Button:hover {
-    text-decoration: underline;
-    text-decoration-color: #079ce1;
-    text-decoration-thickness: 3px;
+
+    Button:hover {
+      text-decoration: underline;
+      text-decoration-color: #079ce1;
+      text-decoration-thickness: 3px;
+    }
   }
- }
+
   .TestimonialsContent1 {
     flex: 0 1 460px;
     display: flex;
@@ -385,8 +411,9 @@ body.no-scroll { overflow: hidden; }
     font-family: sans-serif;
     font-size: 1rem;
     font-weight: 250;
- 
+
   }
+
   .PopularChallenges h2 {
     font-family: sans-serif;
     font-size: 1.65rem;
@@ -394,12 +421,12 @@ body.no-scroll { overflow: hidden; }
     padding: 2rem 0rem;
   }
 
-   .PopularChallenges h2:hover {
+  .PopularChallenges h2:hover {
     text-decoration: underline;
     text-decoration-color: #079ce1;
     text-decoration-thickness: 3px;
   }
- 
+
   .PopularChallengesCards {
     display: grid;
     grid-auto-flow: column;
@@ -418,19 +445,20 @@ body.no-scroll { overflow: hidden; }
     box-shadow: 0px 4px 6px rgba(0, 0, 0, .15);
   }
 
-   .Card img {
+  .Card img {
     width: 100%;
     height: 13rem;
     display: block;
     border-radius: 10px 10px 0 0;
   }
-   .Card h3 {
+
+  .Card h3 {
     font-size: 1.7rem;
     font-weight: 100;
     margin: 0.6rem 0rem;
-   }
+  }
 
-   .Card Button {
+  .Card Button {
     Background-color: rgb(215, 10, 10);
     color: white;
     font-size: 0.85rem;
@@ -442,7 +470,7 @@ body.no-scroll { overflow: hidden; }
     margin-bottom: 0.6rem;
   }
 
-   .Details {
+  .Details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -460,21 +488,22 @@ body.no-scroll { overflow: hidden; }
     font-size: .8rem;
     color: #444;
   }
- 
+
   .CTAButtonCenter {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-areas: "Onsite" "Online"; 
+    grid-template-areas: "Onsite" "Online";
     justify-items: center;
-    margin-top: 0.75rem; 
+    margin-top: 0.75rem;
   }
+
   .OnsiteButtonCenter {
-     grid-area: Onsite; 
-    }
-  
- .OnlineButtonCenter { 
-  grid-area: Online; 
- } 
+    grid-area: Onsite;
+  }
+
+  .OnlineButtonCenter {
+    grid-area: Online;
+  }
 
 
   .FullWidthSection {
@@ -489,7 +518,8 @@ body.no-scroll { overflow: hidden; }
     gap: 2rem;
 
   }
-   .FullWidthSectionText {
+
+  .FullWidthSectionText {
     color: #fff;
     font-family: sans-serif;
     text-align: center;
@@ -497,13 +527,13 @@ body.no-scroll { overflow: hidden; }
     margin: 0;
   }
 
-   .FullWidthSectionText:hover {
+  .FullWidthSectionText:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 1px;
   }
 
-   .FullWidthSectionButton {
+  .FullWidthSectionButton {
     color: hwb(192 42% 16%);
     font-size: 1.2rem;
     font-weight: 500;
@@ -516,10 +546,10 @@ body.no-scroll { overflow: hidden; }
     border-radius: 0.3rem;
   }
 
-   .FullWidthSectionButton:hover {
+  .FullWidthSectionButton:hover {
     border: 2px solid #9c38d6;
   }
-  
+
   .Options {
     grid-template-columns: 10rem;
     grid-template-rows: auto;
@@ -531,10 +561,11 @@ body.no-scroll { overflow: hidden; }
     display: grid;
     grid-column: 1 / -1;
     grid-row: auto;
-  
+
   }
+
   .TeamPlay h2 {
-   font-size: 1.5rem;
+    font-size: 1.5rem;
     font-family: sans-serif;
     font-weight: 790;
     line-height: 120%;
@@ -544,7 +575,7 @@ body.no-scroll { overflow: hidden; }
     padding-top: 0.2rem;
   }
 
- .TeamPlay h2:hover {
+  .TeamPlay h2:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 3px;
@@ -565,7 +596,7 @@ body.no-scroll { overflow: hidden; }
     text-decoration-thickness: 1px;
   }
 
-   .TeamPlay img {
+  .TeamPlay img {
     display: block;
     width: 100%;
     height: 15rem;
@@ -577,8 +608,8 @@ body.no-scroll { overflow: hidden; }
     border: 3px solid #03b2cd;
   }
 
- .TeamPlayButton {
- background-color: #dc3232;
+  .TeamPlayButton {
+    background-color: #dc3232;
     font-family: Roboto;
     font-size: 1.25rem;
     font-weight: 540;
@@ -593,7 +624,7 @@ body.no-scroll { overflow: hidden; }
     border: 3px solid transparent;
   }
 
- .TeamPlayButton:hover {
+  .TeamPlayButton:hover {
     border: 3px solid #9c38d6;
   }
 
@@ -623,7 +654,7 @@ body.no-scroll { overflow: hidden; }
     grid-column: 1;
     grid-row: 2;
 
-   
+
   }
 
   .OnlinePlay h2 {
@@ -643,7 +674,7 @@ body.no-scroll { overflow: hidden; }
     text-decoration-thickness: 2px;
   }
 
-   .OnlinePlay p {
+  .OnlinePlay p {
     font-size: 1.15rem;
     font-family: sans-serif;
     font-weight: 540;
@@ -654,7 +685,7 @@ body.no-scroll { overflow: hidden; }
     padding: 0rem;
   }
 
-   .OnlinePlay p:hover {
+  .OnlinePlay p:hover {
     text-decoration: underline;
     text-decoration-color: #03b2cd;
     text-decoration-thickness: 1px;
@@ -681,7 +712,7 @@ body.no-scroll { overflow: hidden; }
   .OnlinePlayButton:hover {
     border: 2px solid #9c38d6;
   }
- 
+
   .FooterContainer {
     display: grid;
     grid-template-columns: 1fr;
@@ -693,10 +724,10 @@ body.no-scroll { overflow: hidden; }
     padding: 2rem 1.1rem 5rem;
   }
 
-   .Footer h {
+  .Footer h {
     font-family: sans-serif;
     font-size: 2.0rem;
-   
+
   }
 
   .Footer:hover {
@@ -705,12 +736,12 @@ body.no-scroll { overflow: hidden; }
     text-decoration-thickness: 2px;
   }
 
-   .FooterSiteMap {
+  .FooterSiteMap {
     grid-column: 1 / -1;
     display: grid;
   }
 
-   .FooterSiteMap ul {
+  .FooterSiteMap ul {
     display: grid;
     list-style: none;
     margin-left: 0rem;
@@ -719,25 +750,25 @@ body.no-scroll { overflow: hidden; }
     padding: 0;
   }
 
-   .FooterSiteMap li {
+  .FooterSiteMap li {
     text-decoration: none;
     font-family: Roboto;
     font-size: 0.9rem;
     font-weight: 200;
   }
 
-   .FooterSiteMap a {
+  .FooterSiteMap a {
     color: #fff;
     text-decoration: none;
   }
 
-   .FooterContactInfo {
+  .FooterContactInfo {
     grid-column: 1 / -1;
     display: grid;
     row-gap: .0rem;
   }
 
-   .FooterContactInfo ul {
+  .FooterContactInfo ul {
     display: grid;
     list-style: none;
     margin-left: 0rem;
@@ -746,25 +777,25 @@ body.no-scroll { overflow: hidden; }
     margin: 0;
   }
 
-   .FooterContactInfo li {
+  .FooterContactInfo li {
     text-decoration: none;
     font-family: Roboto;
     font-size: 0.9rem;
     font-weight: 200;
     color: #fff;
-     }
+  }
 
-   .FooterContactInfo a {
+  .FooterContactInfo a {
     color: #fff;
     text-decoration: none;
   }
 
-   .Footer p,
+  .Footer p,
   .Footer h4 {
     margin: 0.3rem;
     padding: 0rem;
   }
-  }
+}
 
 
 @media screen and (min-width:$desktop) {
@@ -797,7 +828,7 @@ body.no-scroll { overflow: hidden; }
   .HeaderText br {
     display: none;
   }
-  
+
   .NavigationBar {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
@@ -833,13 +864,16 @@ body.no-scroll { overflow: hidden; }
   }
 
   .menu-button {
-      display: none;
-    }
-    nav[hidden] {
-      display: block !important;
-    }
+    display: none;
+  }
 
-     .Header > .NavigationBar { display: block; }
+  nav[hidden] {
+    display: block !important;
+  }
+
+  .Header>.NavigationBar {
+    display: block;
+  }
 
   .HeroDesktop {
     display: block;
@@ -951,7 +985,7 @@ body.no-scroll { overflow: hidden; }
     font-style: normal;
     margin: 0;
   }
-  
+
   .TestimonialsContent2 {
     flex: 0 1 460px;
     display: flex;
@@ -1068,7 +1102,7 @@ body.no-scroll { overflow: hidden; }
     font-family: sans-serif;
   }
 
-    .Details {
+  .Details {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1085,14 +1119,14 @@ body.no-scroll { overflow: hidden; }
     font-size: .8rem;
     color: #444;
   }
- 
+
   .CTAButtonCenter {
     width: 100%;
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
     margin: 2rem-0;
-    padding: 2rem 0; 
+    padding: 2rem 0;
   }
 
   .OnlineButtonCenter {
@@ -1106,8 +1140,8 @@ body.no-scroll { overflow: hidden; }
     border-radius: 4px;
     border: 3px solid transparent;
     box-sizing: border-box;
-     margin-left: 4rem;
-     
+    margin-left: 4rem;
+
   }
 
   .OnlineButtonCenter:hover {
@@ -1125,7 +1159,7 @@ body.no-scroll { overflow: hidden; }
     border: 3px solid transparent;
     box-sizing: border-box;
     margin-left: 1rem;
-    
+
   }
 
   .OnsiteButtonCenter:hover {
@@ -1254,7 +1288,7 @@ body.no-scroll { overflow: hidden; }
   .TeamPlayButton:hover {
     border: 3px solid #9c38d6;
   }
- 
+
   .OnlinePlay {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1332,7 +1366,7 @@ body.no-scroll { overflow: hidden; }
   .OnlinePlayButton:hover {
     border: 3px solid #9c38d6;
   }
- 
+
   .FooterContainer {
     display: grid;
     grid-template-columns: 4fr 1fr 1fr;
@@ -1343,6 +1377,7 @@ body.no-scroll { overflow: hidden; }
     box-sizing: border-box;
     transition: border-color .2s ease;
   }
+
   .FooterContainer:hover {
     border-color: #079ce1;
   }
@@ -1352,7 +1387,7 @@ body.no-scroll { overflow: hidden; }
     font-weight: 550;
   }
 
-   .Footer h4:hover {
+  .Footer h4:hover {
     color: #03b2cd;
 
   }
