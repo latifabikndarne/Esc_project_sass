@@ -130,11 +130,11 @@ footer {
     inset: 0;
     z-index: 9999;
     margin: 0.9rem;
-    display: flex;
+    backdrop-filter: blur(8px);
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: scale(0.98);
+    transform: scale(0.9);
     pointer-events: none;
   }
   .menu-overlay.open {
@@ -146,21 +146,11 @@ footer {
   @keyframes fadeZoomIn {
     0% {
       opacity: 0;
-      transform: scale(0.98);
+      transform: scale(0.9);
     }
     100% {
       opacity: 1;
       transform: scale(1);
-    }
-  }
-  @keyframes fadeZoomOut {
-    0% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(0.98);
     }
   }
   .menu-overlay[hidden] {
