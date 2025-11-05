@@ -53,10 +53,6 @@ body {
   text-decoration: underline;
 }
 
-.MainContent { 
-  background-color: white;
-
-}
 
 .HeroMobile {
   width: 100%;
@@ -114,7 +110,7 @@ footer {
   .HeaderText br {
     display: block;
   }
- /* Hamburgarknappen uppe till höger */
+ 
 .Header { position: relative; }
 .menu-button {
   position: absolute;
@@ -125,7 +121,7 @@ footer {
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  background: transparent; 
+  background: black; 
   border: 0; 
   padding: 6px; 
 }
@@ -143,34 +139,39 @@ footer {
   inset: 0; 
   z-index: 9999;
   margin: 0.8rem;
-  border: 3px solid transparent;
-  transform: translateY(1px);
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
+ display: none;               /* dold från början */
+  justify-content: center;
+  align-items: center;
+  animation-fill-mode: both;  
 }
 
- @keyframes fadeIn {
-    0% {
-      transform: translateY(0px);
-      opacity: 0;
-    }
-     50% {
-      transform: translateY(5px);
-      opacity: 1;
-    }
-  
-    100% {
-      transform: translateY(5px);
-      opacity: 1;
-    }
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
   }
-.menu-overlay:hover {
-border: 2px solid rgb(10, 141, 197);
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
+
+@keyframes fadeZoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+
 
 .overlay-nav    { 
   position: relative;
- }              /* så att abs-position blir inom nav */
+ }              
 .overlay-close  { 
   position: absolute; 
   color: white;
@@ -181,18 +182,19 @@ border: 2px solid rgb(10, 141, 197);
   right: 1.2rem; 
   border: none;
   cursor: pointer;
-  line-height: 1;  
+  line-height: 1; 
+  z-index: 10000; cursor: pointer; 
  }
 
 .menu-overlay[hidden] {
-  display: none !important; }  /* extra säker dölja */
+  display: none !important; }  
 body.no-scroll { overflow: hidden; }
 
-/* Menylista i overlay */
+
 .overlay-nav ul {
   list-style: none;
   margin: 0; 
-  padding: 13rem 6rem;
+  padding: 12rem 4rem;
   display: grid; 
   gap: 2.5rem;
   text-align: center;
@@ -213,11 +215,6 @@ body.no-scroll { overflow: hidden; }
  .NavigationBar { display: none; }
 
 
-
-.MainContent { 
-  background-color: white;
-
-}
   .HeroMobile {
     display: block;
     width: 100%;
@@ -843,19 +840,6 @@ body.no-scroll { overflow: hidden; }
     }
 
      .Header > .NavigationBar { display: block; }
-    /*nav ul {
-      display: flex;
-      gap: 2rem;
-    }
-    nav li {
-      margin: 0;
-    }*/
-}
-
-  .MainContent { 
-  background-color: white;
-
-}
 
   .HeroDesktop {
     display: block;
@@ -1448,4 +1432,4 @@ body.no-scroll { overflow: hidden; }
     padding: 0;
   }
 
-  
+}

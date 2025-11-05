@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
   const menuBtn  = document.getElementById('menuButton');
   const overlay  = document.getElementById('menuOverlay');
   const closeBtn = overlay.querySelector('.overlay-close');
@@ -38,6 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  closeBtn.addEventListener('click', () => { console.log('close'); closeMenu(); });
 
-});
