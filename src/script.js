@@ -52,17 +52,17 @@ function toggleMenu() {
 
 // Öppna
 menuBtn.addEventListener('click', toggleMenu);
-menuBtn.addEventListener('keydown', event=> {
-  if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleMenu(); }
+menuBtn.addEventListener('keydown', e=> {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
 });
 
 // Stäng
 closeBtn.addEventListener('click', closeMenu);
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && !overlay.hidden) closeMenu();
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !overlay.hidden) closeMenu();
 });
 
 // Klick på bakgrunden stänger
-overlay.addEventListener('click', event => {
-  if (event.target === overlay) closeMenu();
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) closeMenu();
 });
