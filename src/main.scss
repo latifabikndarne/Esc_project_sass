@@ -89,12 +89,13 @@ footer {
     display: grid;
     grid-template-columns: 4rem 1fr;
     align-items: center;
-    column-gap: 2.5rem;
-    padding: 1rem 1rem;
+    column-gap: 3.1rem;
+    padding: 1.2rem 0.9rem;
+    border-radius: 0px;
   }
 
   .Header img {
-    height: 65px;
+    height: 70px;
     width: auto;
     max-width: none;
     display: block;
@@ -102,7 +103,8 @@ footer {
 
   .HeaderText {
     grid-column: 2 / 3;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     white-space: nowrap;
     margin: 0;
   }
@@ -117,10 +119,10 @@ footer {
 
   .menu-button {
     position: absolute;
-    top: .75rem;
-    right: .75rem;
-    width: 50px;
-    height: 36px;
+    top: 1.40rem;
+    right: .70rem;
+    width: 45px;
+    height: 26px;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
