@@ -7,17 +7,16 @@ const closeBtn = overlay.querySelector('.overlay-close');
 
 function openMenu() {
   menuBtn.setAttribute('aria-expanded', 'true');
-
-  overlay.classList.add('open');
   overlay.hidden = false;
+   document.body.classList.add('no-scroll');
+  
 
   
   requestAnimationFrame(() => {
-    overlay.classList.remove('closing');
     overlay.classList.add('open');
   });
 
-  document.body.classList.add('no-scroll');
+ 
   document.body.classList.add('blurred');
 
   const firstItem = overlay.querySelector('[role="menuitem"] a');
@@ -26,7 +25,7 @@ function openMenu() {
 
 function closeMenu() {
   menuBtn.setAttribute('aria-expanded', 'false');
-
+    
   document.body.classList.remove('blurred', 'no-scroll');
   overlay.classList.remove('open');
   overlay.classList.add('closing');
