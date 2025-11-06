@@ -9,7 +9,7 @@ function openMenu() {
   menuBtn.setAttribute('aria-expanded', 'true');
   overlay.hidden = false;
    document.body.classList.add('no-scroll');
-  
+  document.body.classList.add('blurred');
 
   
   requestAnimationFrame(() => {
@@ -17,7 +17,7 @@ function openMenu() {
   });
 
  
-  document.body.classList.add('blurred');
+  
 
   const firstItem = overlay.querySelector('[role="menuitem"] a');
   if (firstItem) firstItem.focus();
@@ -25,11 +25,12 @@ function openMenu() {
 
 function closeMenu() {
   menuBtn.setAttribute('aria-expanded', 'false');
-    
-  document.body.classList.remove('blurred', 'no-scroll');
-  overlay.classList.remove('open');
-  overlay.classList.add('closing');
+  overlay.classList.remove('open','closing');
+  overlay.hidden = true;
+  document.body.classList.remove('no-scroll','blurred');
+  menuBtn.focus();
 
+  
 
   const onAnimEnd = (e) => {
     if (e.target !== overlay) return;
