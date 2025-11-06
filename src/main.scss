@@ -146,7 +146,7 @@ footer {
     z-index: 9999;
     margin: 0.95rem;
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(20px); 
     justify-content: center;
     align-items: center;
     opacity: 0;
@@ -199,13 +199,13 @@ footer {
     transform: scale(0.8);
     transition: opacity 0.4s ease, transform 0.4s ease;
     transition-delay: 0s;
-    /* ingen delay när man stänger */
+
   }
   .menu-overlay.open .overlay-close {
   opacity: 1;
   transform: scale(1);
-  transition-delay: 1s; /* ⏱ visas lite efter fadeZoomIn */
-}
+  transition-delay: 1s; 
+  }
 
   .menu-overlay[hidden] {
     display: none !important;

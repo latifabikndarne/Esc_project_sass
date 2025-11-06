@@ -21,6 +21,7 @@ function openMenu() {
   });
 
   document.body.classList.add('no-scroll');
+  document.body.classList.add('blurred');
 
   const firstItem = overlay.querySelector('[role="menuitem"] a');
   if (firstItem) firstItem.focus();
