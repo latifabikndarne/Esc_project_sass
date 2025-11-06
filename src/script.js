@@ -3,18 +3,15 @@
 const overlay  = document.getElementById('menuOverlay');
 const closeBtn = overlay.querySelector('.overlay-close');
 
-// Viktigt: overlay ska INTE vara display:none i CSS.
-// Basen ska vara synlig men osynlig (opacity:0, pointer-events:none).
-// Animationen triggas med klasserna .open och .closing.
+
 
 function openMenu() {
   menuBtn.setAttribute('aria-expanded', 'true');
 
-  // 1) gör den möjlig att visas (ta bort hidden om du använder det)
+  overlay.classList.add('open');
   overlay.hidden = false;
 
-  // 2) trigga CSS @keyframes genom att lägga på .open
-  //    requestAnimationFrame säkrar att browsern hinner registrera state
+  
   requestAnimationFrame(() => {
     overlay.classList.remove('closing');
     overlay.classList.add('open');
@@ -30,16 +27,16 @@ function openMenu() {
 function closeMenu() {
   menuBtn.setAttribute('aria-expanded', 'false');
 
-  // Kör ut-animationen
+  document.body.classList.remove('blurred', 'no-scroll');
   overlay.classList.remove('open');
   overlay.classList.add('closing');
 
-  // När ut-animationen är klar → göm, städa klasser
+
   const onAnimEnd = (e) => {
     if (e.target !== overlay) return;
     overlay.removeEventListener('animationend', onAnimEnd);
     overlay.classList.remove('closing');
-    overlay.hidden = true;                 // nu får den “försvinna på riktigt”
+    overlay.hidden = true;                 
     document.body.classList.remove('no-scroll');
     menuBtn.focus();
   };
@@ -51,19 +48,19 @@ function toggleMenu() {
   (isOpen ? closeMenu : openMenu)();
 }
 
-// Öppna
+
 menuBtn.addEventListener('click', toggleMenu);
 menuBtn.addEventListener('keydown', e=> {
   if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
 });
 
-// Stäng
+
 closeBtn.addEventListener('click', closeMenu);
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && !overlay.hidden) closeMenu();
 });
 
-// Klick på bakgrunden stänger
+
 overlay.addEventListener('click', e => {
   if (e.target === overlay) closeMenu();
 });

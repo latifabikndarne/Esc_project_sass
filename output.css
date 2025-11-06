@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   margin: 0;
@@ -109,20 +110,20 @@ footer {
   .menu-button {
     position: absolute;
     top: 1.4rem;
-    right: 0.7rem;
-    width: 45px;
+    right: 1.5rem;
+    width: 50px;
     height: 26px;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     background: black;
     border: 0;
-    padding: 1px;
+    padding: 0.8px;
   }
   .menu-button span {
     display: block;
     height: 4.5px;
-    width: 2.4rem;
+    width: 2.8rem;
     background: #fff;
     border-radius: 2px;
   }
@@ -131,14 +132,28 @@ footer {
     background-color: black;
     inset: 0;
     z-index: 9999;
-    margin: 0.95rem;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    margin: 1rem 3rem 1rem 1rem;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transform: scale(0.9);
     pointer-events: none;
+  }
+  body.blurred Header,
+  body.blurred main {
+    filter: blur(14px);
+    transition: filter 0.5s ease;
+  }
+  /* Lägg till en liten mörk ton för glas-effekt */
+  body.blurred main::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba 0, 0, 0, 0.22;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 998;
+    pointer-events: none; /* precis under din menu-overlay (som har z-index: 9999) */
   }
   .menu-overlay.open {
     opacity: 1;
@@ -169,7 +184,7 @@ footer {
     font-size: 3.8rem;
     font-weight: 400;
     margin-top: 0.1rem;
-    margin-left: 18.5rem;
+    margin-left: 16.5rem;
     border: none;
     line-height: 1;
     z-index: 10000;
