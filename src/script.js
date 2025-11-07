@@ -1,23 +1,17 @@
 
-  const menuBtn  = document.getElementById('menuButton');
-const overlay  = document.getElementById('menuOverlay');
+const menuBtn = document.getElementById('menuButton');
+const overlay = document.getElementById('menuOverlay');
 const closeBtn = overlay.querySelector('.overlay-close');
-
-
 
 function openMenu() {
   menuBtn.setAttribute('aria-expanded', 'true');
   overlay.hidden = false;
-   document.body.classList.add('no-scroll');
+  document.body.classList.add('no-scroll');
   document.body.classList.add('blurred');
 
-  
   requestAnimationFrame(() => {
     overlay.classList.add('open');
   });
-
- 
-  
 
   const firstItem = overlay.querySelector('[role="menuitem"] a');
   if (firstItem) firstItem.focus();
@@ -25,18 +19,16 @@ function openMenu() {
 
 function closeMenu() {
   menuBtn.setAttribute('aria-expanded', 'false');
-  overlay.classList.remove('open','closing');
+  overlay.classList.remove('open', 'closing');
   overlay.hidden = true;
-  document.body.classList.remove('no-scroll','blurred');
+  document.body.classList.remove('no-scroll', 'blurred');
   menuBtn.focus();
-
-  
 
   const onAnimEnd = (e) => {
     if (e.target !== overlay) return;
     overlay.removeEventListener('animationend', onAnimEnd);
     overlay.classList.remove('closing');
-    overlay.hidden = true;                 
+    overlay.hidden = true;
     document.body.classList.remove('no-scroll');
     menuBtn.focus();
   };
@@ -48,9 +40,8 @@ function toggleMenu() {
   (isOpen ? closeMenu : openMenu)();
 }
 
-
 menuBtn.addEventListener('click', toggleMenu);
-menuBtn.addEventListener('keydown', e=> {
+menuBtn.addEventListener('keydown', e => {
   if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
 });
 
