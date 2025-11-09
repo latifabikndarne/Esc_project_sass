@@ -2,6 +2,10 @@
 @use '../lib/mixins' as *;
 
   .Header {
+  background-color: #001826;
+}
+
+.Header {
     display: grid;
     grid-template-columns: 4rem 1fr;
     align-items: center;
