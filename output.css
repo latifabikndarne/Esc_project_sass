@@ -691,7 +691,7 @@ Button:hover {
   text-decoration-thickness: 3px;
 }
 
-.PopularChalleges Cards {
+.PopularChalleges .Cards {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
@@ -783,7 +783,7 @@ Button:hover {
     font-weight: 450;
     margin: 0 0 1rem;
   }
-  .PopularChallengesCards {
+  .PopularChallenges Cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
