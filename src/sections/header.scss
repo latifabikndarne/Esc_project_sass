@@ -1,0 +1,30 @@
+@use '../lib/variables' as *;
+@use '../lib/mixins' as *;
+
+  .Header {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    align-items: center;
+    column-gap: 3.1rem;
+    padding: 1.2rem 0.9rem;
+    border-radius: 0px;
+  }
+
+  .Header img {
+    height: 70px;
+    width: auto;
+    max-width: none;
+    display: block;
+  }
+
+  .HeaderText {
+    grid-column: 2 / 3;
+    font-size: 1.1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .HeaderText br {
+    display: block;
+  }

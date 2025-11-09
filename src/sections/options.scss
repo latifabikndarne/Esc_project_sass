@@ -1,0 +1,328 @@
+@use '../lib/variables' as *;
+/*@use '../lib/mixins' as *;*/
+
+
+ .Options {
+    grid-template-columns: 10rem;
+    grid-template-rows: auto;
+    column-gap: 0rem;
+    padding: 0;
+  }
+
+  .TeamPlay {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: auto;
+
+  }
+
+  .TeamPlay h2 {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 790;
+    line-height: 120%;
+    letter-spacing: 0rem;
+    margin: 1rem;
+    padding-bottom: 0.1rem;
+    padding-top: 0.2rem;
+  }
+
+  .TeamPlay h2:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 3px;
+  }
+
+  .TeamPlay p {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-left: 1rem;
+    padding: 0rem;
+
+  }
+
+  .TeamPlay p:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 1px;
+  }
+
+  .TeamPlay img {
+    display: block;
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    padding-bottom: 0px;
+  }
+
+  .TeamPlay img:hover {
+    border: 3px solid #03b2cd;
+  }
+
+  .TeamPlayButton {
+    background-color: #dc3232;
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 540;
+    color: white;
+    padding: 0.75rem 2.6rem;
+    margin: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 1.8rem;
+    border: none;
+    border-radius: 3px;
+    border: 3px solid transparent;
+  }
+
+  .TeamPlayButton:hover {
+    border: 3px solid #9c38d6;
+  }
+
+  .OnlinePlay {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "text";
+  }
+
+  .OnlinePlayPicture img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 15.5rem;
+    object-fit: cover;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .OnlinePlayPicture img:hover {
+    border: 2px solid #03b2cd;
+  }
+
+  .OnlinePlayText {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .OnlinePlay h2 {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 790;
+    line-height: 120%;
+    letter-spacing: 0rem;
+    margin: 1rem;
+    padding-bottom: 0.1rem;
+    padding-top: 0.2rem;
+  }
+
+  .OnlinePlay h2:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 2px;
+  }
+
+  .OnlinePlay p {
+    font-size: 1.15rem;
+    font-family: sans-serif;
+    font-weight: 540;
+    line-height: 120%;
+    width: auto;
+    gap: 0;
+    margin: 1rem;
+    padding: 0rem;
+  }
+
+  .OnlinePlay p:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 1px;
+  }
+
+  .OnlinePlayButton {
+    background-color: #dc3232;
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 540;
+    color: white;
+    padding: 0.75rem 2.6rem;
+    margin: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 5rem;
+    margin-top: 1.8rem;
+    border: none;
+    border-radius: 3px;
+    border: 3px solid transparent;
+  }
+
+  .OnlinePlayButton:hover {
+    border: 2px solid #9c38d6;
+  }
+
+@include large-screen {
+  .TeamPlay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .TeamPlayPicture {
+    grid-column: 1 / 2;
+  }
+
+  .TeamPlayText {
+    grid-column: 2 / 3;
+  }
+
+
+  .TeamPlayPicture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    transition: border-color .2s ease;
+  }
+
+  .TeamPlayPicture img:hover {
+    border-color: #03b2cd;
+  }
+
+  .TeamPlayText {
+    align-items: center;
+    padding: 1rem 1rem;
+    font-size: 1rem 3rem;
+    font-family: sans-serif;
+    font-weight: 450;
+    letter-spacing: 0rem;
+    gap: 0rem;
+  }
+
+  .TeamPlayText h2 {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0rem;
+    gap: 2rem;
+  }
+
+  .TeamPlayText h2:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 3px;
+  }
+
+  .TeamPlayText p {
+    line-height: 1.5;
+  }
+
+  .TeamPlayText p:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 3px;
+  }
+
+  .TeamPlayButton {
+    background-color: #f31c1c;
+    font-family: Roboto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 3px;
+    border: 3px solid transparent;
+  }
+
+  .TeamPlayButton:hover {
+    border: 3px solid #9c38d6;
+  }
+
+  .OnlinePlay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .OnlinePlayText {
+    grid-column: 1 / 2;
+  }
+
+  .OnlinePlayPicture {
+    grid-column: 2 / 3;
+  }
+
+  .OnlinePlayPicture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    transition: border-color .2s ease;
+  }
+
+  .OnlinePlayPicture img:hover {
+    border-color: #03b2cd;
+  }
+
+  .OnlinePlayText {
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    font-weight: 450;
+    letter-spacing: 0rem;
+    gap: 0rem;
+  }
+
+  .OnlinePlayText h2 {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    font-weight: 760;
+    letter-spacing: 0rem;
+    gap: 2rem;
+  }
+
+  .OnlinePlayText h2:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 3px;
+  }
+
+  .OnlinePlayText p {
+    line-height: 1.5;
+  }
+
+  .OnlinePlayText p:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 3px;
+  }
+
+  .OnlinePlayButton {
+    background-color: #f31c1c;
+    color: white;
+    font-family: Roboto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 3px;
+    border: 3px solid transparent;
+  }
+
+  .OnlinePlayButton:hover {
+    border: 3px solid #9c38d6;
+  }
+}
+
+ 
+
+
+
+
