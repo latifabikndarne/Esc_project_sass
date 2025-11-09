@@ -1,8 +1,30 @@
 /*@use '../lib/variables' as *;*/
 @use '../lib/mixins' as *;
 
-  .Header {
+  .menu-overlay[hidden] { display: none !important; } 
+
+.Header {
   background-color: #001826;
+}
+
+.HeaderText {
+  color: white;
+  font-family: Roboto;
+}
+
+.HeaderText:hover {
+  text-decoration: underline;
+  text-decoration-color: #079ce1;
+  text-decoration-thickness: 3px;
+}
+
+.Header img {
+  height: 8vh;
+  border: 2px solid transparent;
+}
+
+.Header img:hover {
+  border: 2px solid #079ce1;
 }
 
 .Header {

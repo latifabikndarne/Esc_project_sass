@@ -8,8 +8,32 @@
   font-weight: bold;
   padding: 0.8em 2.4em;
   text-decoration: none;}*/
+.menu-overlay[hidden] {
+  display: none !important;
+}
+
 .Header {
   background-color: #001826;
+}
+
+.HeaderText {
+  color: white;
+  font-family: Roboto;
+}
+
+.HeaderText:hover {
+  text-decoration: underline;
+  text-decoration-color: #079ce1;
+  text-decoration-thickness: 3px;
+}
+
+.Header img {
+  height: 8vh;
+  border: 2px solid transparent;
+}
+
+.Header img:hover {
+  border: 2px solid #079ce1;
 }
 
 .Header {
@@ -238,6 +262,18 @@ body.no-scroll {
   }
 }
 /*@use '../lib/variables' as *;*/
+.HeroMobile {
+  width: 100%;
+  height: 35vh;
+  margin-top: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.HeroDesktop {
+  display: none;
+}
+
 .HeroMobile {
   display: block;
   width: 100%;
@@ -1362,16 +1398,7 @@ img {
   max-width: 100%;
 }
 
-/*.Header img {
-  height: 8vh;
-  border: 2px solid transparent;
-}
-
-.Header img:hover {
-  border: 2px solid #079ce1;
-}
-
-.HeaderText {
+/*.HeaderText {
   color: white;
   font-family: Roboto;
 }
@@ -1405,17 +1432,7 @@ img {
 }
 
 
-.HeroMobile {
-  width: 100%;
-  height: 35vh;
-  margin-top: 0px;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.HeroDesktop {
-  display: none;
-}
 footer {
   background-color: #001826;
   color: white;
@@ -1432,6 +1449,3 @@ footer {
   padding-bottom: 0;
 
 }*/
-.menu-overlay[hidden] {
-  display: none !important;
-}

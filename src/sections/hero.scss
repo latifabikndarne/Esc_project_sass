@@ -1,6 +1,17 @@
 /*@use '../lib/variables' as *;*/
 @use '../lib/mixins' as *;
 
+.HeroMobile {
+  width: 100%;
+  height: 35vh;
+  margin-top: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.HeroDesktop {
+  display: none;
+}
 
 .HeroMobile {
     display: block;
