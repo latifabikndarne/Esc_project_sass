@@ -1,0 +1,97 @@
+/*@use '../lib/variables' as *;*/
+@use '../lib/mixins' as *;
+
+
+.FullWidthSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 90%;
+    height: 53vh;
+    padding: 1.8rem;
+    gap: 2rem;
+
+  }
+
+  .FullWidthSectionText {
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .FullWidthSectionText:hover {
+    text-decoration: underline;
+    text-decoration-color: #03b2cd;
+    text-decoration-thickness: 1px;
+  }
+
+  .FullWidthSectionButton {
+    color: hwb(192 42% 16%);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.9rem 2.5rem;
+    margin: 0.9rem;
+    border: 2px solid hwb(192 42% 16%);
+    border-radius: 0.3rem;
+  }
+
+  .FullWidthSectionButton:hover {
+    border: 2px solid #9c38d6;
+  }
+
+   @include large-screen {
+
+   .FullWidthSection {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 52vh;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .FullWidthSectionText {
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 0rem 8rem;
+  }
+
+  .FullWidthSectionText:hover {
+    text-decoration: underline;
+    text-decoration-color: #035ecd;
+    text-decoration-thickness: 2px;
+  }
+
+  .FullWidthSectionButton {
+    color: hwb(192 42% 16%);
+    font-size: 1.2rem;
+    font-weight: 550;
+    text-decoration: none;
+    padding: 0.9rem 2.7rem;
+    margin: 0rem;
+    border: 1.5px solid hwb(192 42% 16%);
+    border-radius: 0.3rem;
+  }
+
+  .FullWidthSectionButton:hover {
+    border: 2px solid #9c38d6;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,34 @@
+/*@use '../lib/variables' as *;*/
+@use '../lib/mixins' as *;
+
+
+.HeroMobile {
+    display: block;
+    width: 100%;
+    height: 13.5rem;
+    object-fit: cover;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .HeroDesktop {
+    display: none;
+  }
+
+@include large-screen {
+  .HeroDesktop {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .HeroMobile {
+    display: none;
+  }
+}
+
+

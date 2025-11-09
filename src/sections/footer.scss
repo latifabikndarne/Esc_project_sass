@@ -1,0 +1,186 @@
+/*@use '../lib/variables' as *;*/
+@use '../lib/mixins' as *;
+
+ .FooterContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #001826;
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: 50;
+    padding: 2rem 1.1rem 5rem;
+  }
+
+  .Footer h {
+    font-family: sans-serif;
+    font-size: 2.2rem;
+  }
+
+  .Footer:hover {
+    text-decoration: underline;
+    text-decoration-color: #079ce1;
+    text-decoration-thickness: 2px;
+  }
+
+  .FooterSiteMap {
+    grid-column: 1 / -1;
+    display: grid;
+  }
+
+  .FooterSiteMap ul {
+    display: grid;
+    list-style: none;
+    margin-left: 0rem;
+    gap: 0rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .FooterSiteMap li {
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+
+  .FooterSiteMap a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .FooterContactInfo {
+    grid-column: 1 / -1;
+    display: grid;
+    row-gap: .0rem;
+  }
+
+  .FooterContactInfo ul {
+    display: grid;
+    list-style: none;
+    margin-left: 0rem;
+    gap: 0rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .FooterContactInfo li {
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 0.9rem;
+    font-weight: 200;
+    color: #fff;
+  }
+
+  .FooterContactInfo a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .Footer p,
+  .Footer h4 {
+    margin: 0.3rem;
+    padding: 0rem;
+  }
+
+@include large-screen {
+ .FooterContainer {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    background-color: #001826;
+    gap: 3rem;
+    padding: 3.5rem;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    transition: border-color .2s ease;
+  }
+
+  .FooterContainer:hover {
+    border-color: #079ce1;
+  }
+
+  .Footer h4 {
+    font-size: 0.9rem;
+    font-weight: 550;
+  }
+
+  .Footer h4:hover {
+    color: #03b2cd;
+
+  }
+
+  .FooterText {
+    grid-column: 1 / 2;
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+    align-items: start;
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+
+  }
+
+  .FooterText:hover {
+    text-decoration: underline;
+    text-decoration-color: #079ce1;
+    text-decoration-thickness: 2px;
+  }
+
+  .FooterSiteMap {
+    grid-column: 2 / 3;
+  }
+
+  .FooterSiteMap ul {
+    list-style: none;
+    row-gap: 0rem;
+  }
+
+  .FooterSiteMap li {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+
+  .FooterContactInfo {
+    grid-column: 3 / 4;
+    justify-self: center;
+    padding: 2rem;
+  }
+
+  .FooterContactInfo ul {
+    list-style: none;
+    margin-left: 0rem;
+    margin: .5rem 0 0;
+  }
+
+  .FooterContactInfo li {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #fff;
+  }
+
+  .FooterSiteMap a,
+  .FooterContactInfo a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .FooterSiteMap a:hover,
+  .FooterContactInfo a:hover {
+    text-decoration: underline;
+    text-decoration-color: #079ce1;
+    text-decoration-thickness: 2px;
+  }
+
+  .FooterSiteMap ul,
+  .FooterContactInfo ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

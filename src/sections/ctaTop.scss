@@ -1,6 +1,6 @@
 
-@use '../lib/variables' as *;
-/*@use '../lib/mixins' as *;*/
+/*@use '../lib/variables' as *;*/
+@use '../lib/mixins' as *;
 
 
  .CTAButtonTop {
@@ -10,14 +10,7 @@
     margin-top: 0.7rem;
   }
 
-  .OnsiteButton {
-    order: 1;
-  }
-
-  .OnlineButton {
-    order: 2;
-  }
-
+ 
   .OnsiteButton {
     background-color: #89d9e9;
     font-family: Roboto;
@@ -46,16 +39,23 @@
     padding-bottom: 1rem;
     padding-top: 0.5rem;
     text-decoration: underline;
+  }
 
-
-    Button:hover {
+    .OnlineButton:hover {
       text-decoration: underline;
       text-decoration-color: #079ce1;
       text-decoration-thickness: 3px;
     }
+
+     .OnsiteButton {
+    order: 1;
   }
 
+  .OnlineButton {
+    order: 2;
+  }
 
+  
 @include large-screen {
   .CTAButtonTop {
     display: flex;
