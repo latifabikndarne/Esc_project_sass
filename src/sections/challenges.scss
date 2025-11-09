@@ -9,20 +9,20 @@
 
   }
 
-&__ h2 {
+.PopularChalleges h2 {
     font-family: sans-serif;
     font-size: 1.5rem;
     font-weight: 540;
     padding: 1rem 1.7rem;
   }
 
- &__h2:hover {
+  .PopularChalleges h2:hover {
     text-decoration: underline;
     text-decoration-color: #079ce1;
     text-decoration-thickness: 3px;
   }
 
-  &Cards {
+  .PopularChalleges Cards {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 100%;

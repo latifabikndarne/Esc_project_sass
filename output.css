@@ -1,9 +1,10 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 3 | @use 'sections/ctaButtonTo.scss';
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   src\main.scss 3:1  root stylesheet */
+/* Error: Top-level selectors may not contain the parent selector "&".
+ *    ,
+ * 45 |   &__p {
+ *    |   ^^^^
+ *    '
+ *   src\sections\challenges.scss 45:3  @use
+ *   src\main.scss 6:1                  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 3 \2502  @use 'sections/ctaButtonTo.scss';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\main.scss 3:1  root stylesheet";
+  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 45 \2502    &__p {\d\a    \2502    ^^^^\a    \2575 \a   src\\sections\\challenges.scss 45:3  @use\a   src\\main.scss 6:1                  root stylesheet';
 }
