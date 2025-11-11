@@ -95,8 +95,22 @@
         
     <section class="PopularChallenges">
       <h2>Popular challenges right now</h2>
-      <div class="PopularChallengesCards">
-        <div class="Card">
+      <div id="chStatus"></div>
+      <div class="PopularChallengesCards" id="chList"></div>
+
+         <template id="challenge-card-template">
+    <div class="Card">
+      <img class="CardImage" src="" alt="">
+      <h3 class="CardTitle"></h3>
+      <div class="Details">
+        <div class="Stars"></div>
+        <span class="Participants"></span>
+      </div>
+      <p class="CardDesc"></p>
+      <button type="button" class="CardCta"></button>
+    </div>
+  </template>
+        <!--<div class="Card">
           <img src="images/image 2 (2).png" alt="Picture of card 1">
           <h3>Title of room (on-site)</h3>
           <div class="Details">
@@ -138,8 +152,8 @@
             Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
             
             <button type="Botton"> Book this room </button>
-        </div>
-      </div>
+        </div> 
+      </div> -->
     </section>
 
     <section class="CTAButtonCenter">
