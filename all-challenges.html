@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our challenges</title>
+  <link rel="stylesheet" href="output.css">
+  <script defer src="src/all-challenges.js"></script>
+
+  <style>
+    /* --- Mobil: horisontell skroll med snap --- */
+    .AllCards {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 80%;          /* varje kort ~80% av viewportbredd */
+      gap: 16px;
+      padding: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .AllCards .Card { scroll-snap-align: start; }
+
+    /* --- Desktop: 3 i rad, ingen horisontell skroll --- */
+    @media (min-width: 900px) {
+      .AllCards {
+        grid-auto-flow: row;           /* sluta autokolumnlägga */
+        grid-auto-columns: auto;
+        grid-template-columns: repeat(3, 1fr);
+        overflow: visible;
+      }
+    }
+  </style>
+  <script defer src="all-challenges.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <h1 style="text-align:center;">Our challenges</h1>
+
+    <div id="filterInfo" style="text-align:center; color:#666; margin-bottom:8px;"></div>
+
+    <div id="allStatus" style="text-align:center; color:#666; margin-bottom:8px;">Laddar…</div>
+    <div id="allList" class="AllCards"></div>
+
+    <!-- Samma kortmall som på startsidan -->
+    <template id="challenge-card-template">
+      <div class="Card">
+        <img class="CardImage" src="" alt="">
+        <h3 class="CardTitle"></h3>
+        <div class="Details">
+          <div class="Stars"></div>
+          <span class="Participants"></span>
+        </div>
+        <p class="CardDesc"></p>
+        <button type="button" class="CardCta"></button>
+      </div>
+    </template>
+  </main>
+</body>
+</html>
